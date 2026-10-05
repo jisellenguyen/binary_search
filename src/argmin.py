@@ -144,4 +144,4 @@ def find_boundaries(f, lo = -1, hi = 1):
     elif f(hi) < f(mid):
         return find_boundaries(f, lo,  hi * 2)
     else:
-        return (lo, hi) 
+        return (lo, hi)
