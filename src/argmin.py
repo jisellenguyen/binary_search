@@ -110,7 +110,7 @@ def bounded_argmin(f, lo, hi, epsilon=1e-3):
         giving us k = O(log 1/epsilon).
     '''
     if hi - lo < epsilon:
-        return(lo + hi) / 2
+        return (lo + hi) / 2
 
     m1 = lo + (hi - lo) / 3
     m2 = lo + 2 * (hi - lo) / 3
@@ -137,11 +137,11 @@ def find_boundaries(f, lo=-1, hi=1):
     else:
         you're done; return lo,hi
     '''
-    mid = (lo + hi ) / 2
+    mid = (lo + hi) / 2
 
     if f(lo) < f(mid):
         return find_boundaries(f, lo * 2, hi)
     elif f(hi) < f(mid):
-        return find_boundaries(f, lo,  hi * 2)
+        return find_boundaries(f, lo, hi * 2)
     else:
         return (lo, hi)
